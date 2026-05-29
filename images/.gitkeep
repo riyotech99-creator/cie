@@ -1,0 +1,6 @@
+# Taruh semua foto kamu di folder ini.
+# Nama file yang dipakai web ada di file js/config.js, contoh:
+#   images/landing.jpg
+#   images/timeline1.jpg
+#   images/galeri1.jpg
+# Kalau sebuah foto belum ada, web tetap jalan (foto itu otomatis disembunyikan).

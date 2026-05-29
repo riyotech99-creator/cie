@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anniversary Kita 💕</title>
+  <meta name="description" content="Web spesial untuk merayakan satu tahun kebersamaan kita." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Lapisan hati melayang (animasi latar) -->
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <!-- ============================================================ -->
+  <!-- 1) LANDING -->
+  <!-- ============================================================ -->
+  <header class="landing" id="landing">
+    <div class="landing__overlay"></div>
+    <div class="landing__content">
+      <p class="landing__pretitle" data-reveal>Happy Anniversary</p>
+      <h1 class="landing__title" id="landingTitle" data-reveal></h1>
+      <p class="landing__subtitle" id="landingSubtitle" data-reveal></p>
+      <a class="btn landing__btn" id="landingBtn" href="#counter" data-reveal></a>
+    </div>
+    <div class="landing__scroll" aria-hidden="true">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- 2) COUNTER -->
+  <!-- ============================================================ -->
+  <section class="section counter" id="counter">
+    <h2 class="section__title" id="counterTitle" data-reveal></h2>
+    <div class="counter__grid" id="counterGrid" data-reveal></div>
+    <p class="counter__note" id="counterNote" data-reveal></p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3) TIMELINE -->
+  <!-- ============================================================ -->
+  <section class="section timeline" id="timeline">
+    <h2 class="section__title" data-reveal>Perjalanan Kita</h2>
+    <div class="timeline__track" id="timelineTrack"></div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 4) GALERI -->
+  <!-- ============================================================ -->
+  <section class="section gallery" id="gallery">
+    <h2 class="section__title" id="galleryTitle" data-reveal></h2>
+    <p class="section__subtitle" id="gallerySubtitle" data-reveal></p>
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 5) VIDEO -->
+  <!-- ============================================================ -->
+  <section class="section video" id="video">
+    <h2 class="section__title" id="videoTitle" data-reveal></h2>
+    <p class="section__subtitle" id="videoSubtitle" data-reveal></p>
+    <div class="video__frame" id="videoFrame" data-reveal></div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 6) SURAT CINTA -->
+  <!-- ============================================================ -->
+  <section class="section letter" id="letter">
+    <h2 class="section__title" id="letterTitle" data-reveal></h2>
+    <div class="letter__wrap" data-reveal>
+      <button class="btn letter__toggle" id="letterToggle"></button>
+      <article class="letter__paper" id="letterPaper" hidden></article>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 7) KEJUTAN -->
+  <!-- ============================================================ -->
+  <section class="section surprise" id="surprise">
+    <h2 class="section__title" id="surpriseTitle" data-reveal></h2>
+    <button class="btn surprise__btn" id="surpriseBtn" data-reveal></button>
+    <div class="surprise__reveal" id="surpriseReveal" hidden>
+      <p class="surprise__message" id="surpriseMessage"></p>
+      <p class="surprise__small" id="surpriseSmall"></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Dibuat dengan <span class="footer__heart">❤️</span> spesial untukmu</p>
+  </footer>
+
+  <!-- Lightbox galeri -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Tutup">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Sebelumnya">&#10094;</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+      <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Selanjutnya">&#10095;</button>
+  </div>
+
+  <!-- Lapisan confetti untuk kejutan -->
+  <canvas class="confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
