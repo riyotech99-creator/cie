@@ -23,6 +23,10 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Pastikan elemen dengan atribut [hidden] benar-benar tersembunyi,
+   walau punya aturan display lain (mis. lightbox yang display:flex). */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
